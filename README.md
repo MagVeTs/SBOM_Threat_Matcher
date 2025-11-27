@@ -2,7 +2,7 @@
 
 A lightweight, standalone Python utility for scanning Software Bills of Materials (SBOMs) and lockfiles against a list of known malicious or disallowed packages.
 
-Designed originally to detect the **Shai-Hulud 2.0** supply chain attack, this tool is generic and can be used to check for any set of package names (e.g., malware, typo-squatting lists, or blacklisted libraries).
+Designed originally to detect the **Shai-Hulud 2.0** supply chain attack (see here: https://sola.security/sha1-hulud-impacted-packages/), this tool is generic and can be used to check for any set of package names (e.g., malware, typo-squatting lists, or blacklisted libraries).
 
 ## **Features**
 
