@@ -27,45 +27,42 @@ The script is run from the command line and accepts two arguments.
 
 Bash
 
-python3 check_sbom.py \[TARGET_FILE\] \[THREAT_LIST\]
+python3 check_sbom.py \[TARGET_FILE\] \[THREAT_LIST\]
 
--   
-    **TARGET_FILE** (Required): The JSON file you want to scan (SBOM or lockfile).
-- **THREAT_LIST** (Optional): Path to the text file containing bad package names. If omitted, defaults to vulnerable_packages.txt in the current directory.
+**TARGET_FILE** (Required): The JSON file you want to scan (SBOM or lockfile).
+**THREAT_LIST** (Optional): Path to the text file containing bad package names. If omitted, defaults to vulnerable_packages.txt in the current directory.
 
 ### **Examples**
 
-1\. Basic Run (Default List)
+1. Basic Run (Default List)
 
 Scans sbom.json using the default vulnerable_packages.txt in the same folder.
 
 Bash
 
-python3 check_sbom.py sbom.json
+python3 check_sbom.py sbom.json
 
-2. Scanning a Lockfile
+2. Scanning a Lockfile
 
 Directly checks a local project's lock file.
 
 Bash
+python3 check_sbom.py package-lock.json
 
-python3 check_sbom.py package-lock.json
-
-3. Using a Custom Threat List
+3. Using a Custom Threat List
 
 Checks an SBOM against a specific list of malware (e.g., a new threat report).
 
 Bash
+python3 check_sbom.py application.sbom.json new_malware_list.txt
 
-python3 check_sbom.py application.sbom.json new_malware_list.txt
-
-**4\. Using Absolute Paths**
+**4\. Using Absolute Paths**
 
 Bash
 
-python3 check_sbom.py /tmp/repo_export.json /Users/admin/sec-lists/shai_hulud.txt
+python3 check_sbom.py /tmp/repo_export.json /Users/admin/sec-lists/shai_hulud.txt
 
-## **Supported Formats**
+## **Supported Formats**
 
 The tool automatically detects and parses the following JSON structures:
 
@@ -95,7 +92,7 @@ The text file containing bad packages should have **one package per line**.
 
 Plaintext
 
-@ensdomains/buffer
+@ensdomains/buffer
 
 02-echo 0.0.7
 
@@ -103,8 +100,8 @@ malicious-lib
 
 @fake/package <-- comments or extra text here are ignored
 
-## **Output Reference**
+## **Output Reference**
 
-- **✅ CLEAN:** No matches found.
-- **🚨 DANGER:** One or more packages from your list were found in the file.
-- **❌ Error:** File not found or invalid JSON.
+**✅ CLEAN:** No matches found.
+**🚨 DANGER:** One or more packages from your list were found in the file.
+**❌ Error:** File not found or invalid JSON.
