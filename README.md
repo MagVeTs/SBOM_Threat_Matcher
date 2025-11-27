@@ -18,26 +18,25 @@ Designed originally to detect the **Shai-Hulud 2.0** supply chain attack, this t
 
 ## **Setup**
 
-- Save the script as check_sbom.py.
-- Create a text file (default: vulnerable_packages.txt) containing the list of package names you want to flag.
+- Save the script as `check_sbom.py`.
+- Create a text file (default: `vulnerable_packages.txt`) containing the list of package names you want to flag.
 
 ## **Usage**
 
 The script is run from the command line and accepts two arguments.
 
 ```Bash
-
 python3 check_sbom.py \[TARGET_FILE\] \[THREAT_LIST\]
 ```
 
 **TARGET_FILE** (Required): The JSON file you want to scan (SBOM or lockfile).
-**THREAT_LIST** (Optional): Path to the text file containing bad package names. If omitted, defaults to vulnerable_packages.txt in the current directory.
+**THREAT_LIST** (Optional): Path to the text file containing bad package names. If omitted, defaults to `vulnerable_packages.txt` in the current directory.
 
 ### **Examples**
 
 1. Basic Run (Default List)
 
-Scans sbom.json using the default vulnerable_packages.txt in the same folder.
+Scans `sbom.json` using the default vulnerable_packages.txt in the same folder.
 
 ```Bash
 
@@ -92,7 +91,7 @@ The text file containing bad packages should have **one package per line**.
 - The script automatically handles lines that contain version numbers or extra data (it parses the first word only).
 - Case-insensitive normalization is applied.
 
-**Valid Example (vulnerable_packages.txt):**
+**Valid Example (`vulnerable_packages.txt`):**
 
 Plaintext
 
