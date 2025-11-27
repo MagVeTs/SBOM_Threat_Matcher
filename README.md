@@ -40,7 +40,7 @@ Scans sbom.json using the default vulnerable_packages.txt in the same folder.
 
 Bash
 
-```python3 check_sbom.py sbom.json
+python3 check_sbom.py sbom.json
 
 2. Scanning a Lockfile
 
