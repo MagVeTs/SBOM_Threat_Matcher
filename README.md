@@ -36,7 +36,7 @@ python3 sbom_threat_matcher.py [TARGET_FILE] [THREAT_LIST]
 
 1. Basic Run (Default List)
 
-Scans `sbom.json` using the default vulnerable_packages.txt in the same folder.
+Scans `sbom.json` using the default `vulnerable_packages.txt` in the same folder.
 
 ```Bash
 python3 sbom_threat_matcher.py sbom.json
