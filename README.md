@@ -102,6 +102,6 @@ malicious-lib
 
 ## **Output Reference**
 
-**✅ CLEAN:** No matches found.
-**🚨 DANGER:** One or more packages from your list were found in the file.
-**❌ Error:** File not found or invalid JSON.
+- **✅ CLEAN:** No matches found.
+- **🚨 DANGER:** One or more packages from your list were found in the file.
+- **❌ Error:** File not found or invalid JSON.
