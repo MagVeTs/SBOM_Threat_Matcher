@@ -25,9 +25,10 @@ Designed originally to detect the **Shai-Hulud 2.0** supply chain attack, this t
 
 The script is run from the command line and accepts two arguments.
 
-Bash
+```Bash
 
 python3 check_sbom.py \[TARGET_FILE\] \[THREAT_LIST\]
+```
 
 **TARGET_FILE** (Required): The JSON file you want to scan (SBOM or lockfile).
 **THREAT_LIST** (Optional): Path to the text file containing bad package names. If omitted, defaults to vulnerable_packages.txt in the current directory.
