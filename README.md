@@ -48,21 +48,23 @@ python3 check_sbom.py sbom.json
 
 Directly checks a local project's lock file.
 
-Bash
+```Bash
 python3 check_sbom.py package-lock.json
+```
 
 3. Using a Custom Threat List
 
 Checks an SBOM against a specific list of malware (e.g., a new threat report).
 
-Bash
+```Bash
 python3 check_sbom.py application.sbom.json new_malware_list.txt
+```
 
 **4\. Using Absolute Paths**
 
-Bash
-
+```Bash
 python3 check_sbom.py /tmp/repo_export.json /Users/admin/sec-lists/shai_hulud.txt
+```
 
 ## **Supported Formats**
 
