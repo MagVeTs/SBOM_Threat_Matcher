@@ -26,11 +26,11 @@ Designed originally to detect the **Shai-Hulud 2.0** supply chain attack, this t
 The script is run from the command line and accepts two arguments.
 
 ```Bash
-python3 check_sbom.py \[TARGET_FILE\] \[THREAT_LIST\]
+python3 check_sbom.py [TARGET_FILE] [THREAT_LIST]
 ```
 
-**TARGET_FILE** (Required): The JSON file you want to scan (SBOM or lockfile).
-**THREAT_LIST** (Optional): Path to the text file containing bad package names. If omitted, defaults to `vulnerable_packages.txt` in the current directory.
+- **TARGET_FILE** (Required): The JSON file you want to scan (SBOM or lockfile).
+- **THREAT_LIST** (Optional): Path to the text file containing bad package names. If omitted, defaults to `vulnerable_packages.txt` in the current directory.
 
 ### **Examples**
 
@@ -39,7 +39,6 @@ python3 check_sbom.py \[TARGET_FILE\] \[THREAT_LIST\]
 Scans `sbom.json` using the default vulnerable_packages.txt in the same folder.
 
 ```Bash
-
 python3 check_sbom.py sbom.json
 ```
 
@@ -59,7 +58,7 @@ Checks an SBOM against a specific list of malware (e.g., a new threat report).
 python3 check_sbom.py application.sbom.json new_malware_list.txt
 ```
 
-**4\. Using Absolute Paths**
+**4. Using Absolute Paths**
 
 ```Bash
 python3 check_sbom.py /tmp/repo_export.json /Users/admin/sec-lists/shai_hulud.txt
