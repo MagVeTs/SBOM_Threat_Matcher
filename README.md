@@ -18,7 +18,7 @@ Designed originally to detect the **Shai-Hulud 2.0** supply chain attack, this t
 
 ## **Setup**
 
-- Save the script as `check_sbom.py`.
+- Save the script as `sbom_threat_matcher.py`.
 - Create a text file (default: `vulnerable_packages.txt`) containing the list of package names you want to flag.
 
 ## **Usage**
@@ -26,7 +26,7 @@ Designed originally to detect the **Shai-Hulud 2.0** supply chain attack, this t
 The script is run from the command line and accepts two arguments.
 
 ```Bash
-python3 check_sbom.py [TARGET_FILE] [THREAT_LIST]
+python3 sbom_threat_matcher.py [TARGET_FILE] [THREAT_LIST]
 ```
 
 - **TARGET_FILE** (Required): The JSON file you want to scan (SBOM or lockfile).
@@ -39,7 +39,7 @@ python3 check_sbom.py [TARGET_FILE] [THREAT_LIST]
 Scans `sbom.json` using the default vulnerable_packages.txt in the same folder.
 
 ```Bash
-python3 check_sbom.py sbom.json
+python3 sbom_threat_matcher.py sbom.json
 ```
 
 2. Scanning a Lockfile
@@ -47,7 +47,7 @@ python3 check_sbom.py sbom.json
 Directly checks a local project's lock file.
 
 ```Bash
-python3 check_sbom.py package-lock.json
+python3 sbom_threat_matcher.py package-lock.json
 ```
 
 3. Using a Custom Threat List
@@ -55,13 +55,13 @@ python3 check_sbom.py package-lock.json
 Checks an SBOM against a specific list of malware (e.g., a new threat report).
 
 ```Bash
-python3 check_sbom.py application.sbom.json new_malware_list.txt
+python3 sbom_threat_matcher.py application.sbom.json new_malware_list.txt
 ```
 
 **4. Using Absolute Paths**
 
 ```Bash
-python3 check_sbom.py /tmp/repo_export.json /Users/admin/sec-lists/shai_hulud.txt
+python3 sbom_threat_matcher.py /tmp/repo_export.json /Users/admin/sec-lists/shai_hulud.txt
 ```
 
 ## **Supported Formats**
