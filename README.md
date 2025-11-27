@@ -90,9 +90,7 @@ The text file containing bad packages should have **one package per line**.
 - The script automatically handles lines that contain version numbers or extra data (it parses the first word only).
 - Case-insensitive normalization is applied.
 
-**Valid Example (`vulnerable_packages.txt`):**
-
-Plaintext
+**Valid Examples (`vulnerable_packages.txt`):**
 
 @ensdomains/buffer
 
