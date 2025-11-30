@@ -107,4 +107,5 @@ malicious-lib
 - **❌ Error:** File not found or invalid JSON.
 
 ## Contributors
-- MagVeTs
+- MagVeTs (https://github.com/MagVeTs)
+- KfirDu
