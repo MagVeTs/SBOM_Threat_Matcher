@@ -4,6 +4,8 @@ A lightweight, standalone Python utility for scanning Software Bills of Material
 
 Designed originally to detect the **Shai-Hulud 2.0** supply chain attack (see here: https://sola.security/sha1-hulud-impacted-packages/), this tool is generic and can be used to check for any set of package names (e.g., malware, typo-squatting lists, or blacklisted libraries).
 
+SBOM Threat Matcher can be paired with the following Bash script in order to progromatically check all the repositories in an entire GitHub organization or account for vulnerable dependencies: 
+
 ## **Features**
 
 - **Versatile Input:** Supports standard **SPDX** and **CycloneDX** SBOMs, as well as **GitHub Dependency Graph** exports.
