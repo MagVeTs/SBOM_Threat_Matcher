@@ -108,4 +108,4 @@ malicious-lib
 
 ## Contributors
 - MagVeTs (https://github.com/MagVeTs)
-- KfirDu
+- KfirDu (https://github.com/KfirDu)
